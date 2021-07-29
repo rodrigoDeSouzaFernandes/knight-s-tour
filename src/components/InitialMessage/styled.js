@@ -9,6 +9,7 @@ export const MessageBody = styled.div`
   justify-content: center;
   padding: 10px;
   position: absolute;
+  width: 100%;
   z-index: 1;
 `;
 
