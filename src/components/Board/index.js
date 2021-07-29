@@ -12,6 +12,7 @@ function Board() {
   const [initialPosition, setInitialPosition] = useState({line: 0, column: 0});
   const [movements, setMovements] = useState([])
   const [playing, setPlaying] = useState(false);
+  const [reset, setReset] = useState(false);
 
   const setKnight = (square, content = '') => {
     const [line, column] = square.split('-').map(Number);
@@ -54,12 +55,23 @@ function Board() {
       setMovements(abc);
       setKnight(result[count], count + 1);
       
-      if(count === result.length -1) clearInterval(myInterval);
+      if(count === result.length -1) {
+        clearInterval(myInterval);
+        setReset(true);
+      }
       else count += 1
         
     }
-    
+
     const myInterval = setInterval( moveKnight , 500)
+  }
+
+  const cleanBoard = () => {
+    setReset(false)
+    setBoard(makeBoard);
+    setMovements([]);
+    setInitialPosition({line: 0, column: 0});
+    setPlaying(false);
   }
 
   return (
@@ -87,6 +99,7 @@ function Board() {
                   />
                   ))}
           </Line>))}
+          {!playing ? (
           <BtnPlay
             disabled={playing}
             onClick={ () => {
@@ -96,6 +109,14 @@ function Board() {
             >
             COMEÇAR
           </BtnPlay>
+          ) : (
+          <BtnPlay
+            disabled={!reset}
+            onClick={ cleanBoard }
+          >
+          Limpar tabuleiro
+          </BtnPlay>
+          )}
       </BoardBody>
       <MovementsContainer>
         <Movements>

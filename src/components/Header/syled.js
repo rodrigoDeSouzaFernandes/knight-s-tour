@@ -24,16 +24,16 @@ export const HeaderImg = styled.img`
 `;
 
 export const Title = styled.h1`
-font-family: 'Merienda', cursive;
-color: white;
-font-size: 30px;
-text-shadow: 5px 5px 5px black;
+  font-family: 'Merienda', cursive;
+  color: white;
+  font-size: 30px;
+  text-shadow: 5px 5px 5px black;
 
-@media screen and (max-width: 600px) {
-  width: 100%;
-}
+  @media screen and (max-width: 600px) {
+    width: 100%;
+  }
 
-@media screen and (max-width: 370px) {
-  font-size: 20px;
-}
+  @media screen and (max-width: 370px) {
+    font-size: 20px;
+  }
 `;

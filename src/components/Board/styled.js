@@ -124,6 +124,7 @@ export const MovementsContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 
   @media screen and (max-width: 880px) {
     height: fit-content;

@@ -9,8 +9,5 @@ export default function resolveTour(casa) {
   loop.forEach((elem, index) => {
     index < startIndex ? end.push(elem) : start.push(elem);
   })
-
-  debugger
-
   return [...start, ...end]
 }
