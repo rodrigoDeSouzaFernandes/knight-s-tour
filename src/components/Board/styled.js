@@ -15,6 +15,7 @@ export const Square = styled.div`
   align-items: center;
   justify-content: center;
   font-weight: 900;
+  background: white;
 
   @media screen and (max-width: 490px) {
     width: 30px;
@@ -67,6 +68,9 @@ export const Move = styled.span`
   :nth-child(odd){
     background: rgb(200, 200, 200);
   }
+  :nth-child(even){
+    background: rgb(220, 220, 220);
+  }
 
   @media screen and (max-width: 490px) {
     min-width: 55px;
@@ -93,7 +97,6 @@ export const Body = styled.div`
   display: flex;
   justify-content: center;
   padding: 20px;
-  height: 100vh;
   align-items: start;
 
   @media screen and (max-width: 880px) {
@@ -137,6 +140,7 @@ export const BtnPlay = styled.button`
   border: none;
   border-radius: 5px;
   margin: 2px 0;
+  font-family: 'Merienda', cursive;
 
   :disabled {
     background-color: grey;

@@ -20,12 +20,13 @@ function Board() {
     
     const newBoard = board.map((row, l) => row
     .map((col, c) => {
+      
       if (l == line && column == c) {
         console.log('dentro do if', 'casa', c , l)
         return {
-            knight: true,
-            visited: true,
-            content,
+          content,
+          visited: true,
+          knight: true,
           }
       }
       return {
@@ -49,9 +50,9 @@ function Board() {
     const abc = []
 
     const  moveKnight = () => {
-      setKnight(result[count], count + 1);
       abc.push({ moveNumber: count + 1, square: squares[count]})
       setMovements(abc);
+      setKnight(result[count], count + 1);
       
       if(count === result.length -1) clearInterval(myInterval);
       else count += 1
@@ -65,7 +66,7 @@ function Board() {
     <Body>
       <BoardBody >
         <Columns>
-          {Array(8).fill('').map((_e, i) => <p> {toLetter(i)} </p>)}
+          {Array(8).fill('p').map((e, i) => <p key={e + i}> {toLetter(i)} </p>)}
         </Columns>
         {board.map((line, l) => (
           <Line key={`linha ${l}`}>
@@ -98,7 +99,8 @@ function Board() {
       </BoardBody>
       <MovementsContainer>
         <Movements>
-          {movements.map(({moveNumber, square}) => <Move>{`${moveNumber}° - ${square}`}</Move>)}
+          {movements.map(
+            ({moveNumber, square}) => <Move key={`${moveNumber}${square}`}>{`${moveNumber}° - ${square}`}</Move>)}
         </Movements>
       </MovementsContainer>
     </Body>

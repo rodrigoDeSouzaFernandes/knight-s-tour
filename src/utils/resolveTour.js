@@ -10,5 +10,7 @@ export default function resolveTour(casa) {
     index < startIndex ? end.push(elem) : start.push(elem);
   })
 
+  debugger
+
   return [...start, ...end]
 }
