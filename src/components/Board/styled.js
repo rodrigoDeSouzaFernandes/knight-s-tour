@@ -8,31 +8,31 @@ export const BoardBody = styled.main`
 `;
 
 export const Square = styled.div`
-  width: 50px;
-  height: 50px;
+  align-items: center;
+  background: white;
   color: red;
   display: flex;
-  align-items: center;
-  justify-content: center;
   font-weight: 900;
-  background: white;
+  height: 50px;
+  justify-content: center;
+  width: 50px;
 
   @media screen and (max-width: 490px) {
-    width: 30px;
     height: 30px;
+    width: 30px;
   }
 `;
 
 export const Knight = styled.div`
-  width: 50px;
-  height: 50px;
   background-image: url(${horse});
-  background-size: cover;
   background-position: center;
+  background-size: cover;
+  height: 50px;
+  width: 50px;
 
   @media screen and (max-width: 490px) {
-    width: 30px;
     height: 30px;
+    width: 30px;
   }
 `;
 
@@ -53,9 +53,9 @@ export const Line = styled.div`
 
   @media screen and (max-width: 490px) {
     p {
-      width: 30px;
       height: 30px;
-      margin:0
+      margin:0;
+      width: 30px;
     }
 
     height: 30px;
@@ -63,9 +63,9 @@ export const Line = styled.div`
 `;
 
 export const Move = styled.span`
-  width: 12%;
-  min-width: 70px;
   background: white;
+  min-width: 70px;
+  width: 12%;
   :nth-child(odd){
     background: rgb(200, 200, 200);
   }
@@ -78,13 +78,13 @@ export const Move = styled.span`
 
 export const Movements = styled.p`
   align-items: flex-start;
-  justify-content: flex-start;
-  width: 80%;
-  line-height: 2;
   display: flex;
   flex-wrap: wrap;
-  margin: 10px;
   height: fit-content;
+  justify-content: flex-start;
+  line-height: 2;
+  margin: 10px;
+  width: 80%;
 
   @media screen and (max-width: 490px) {
     width: 100%;
@@ -92,19 +92,20 @@ export const Movements = styled.p`
 `;
 
 export const Body = styled.div`
+  align-items: start;
   display: flex;
   justify-content: center;
   padding: 20px;
-  align-items: start;
 
   @media screen and (max-width: 880px) {
-    flex-direction: column;
     align-items: center;
+    flex-direction: column;
   }
 `;
 
 export const Columns = styled.div`display: flex;
   align-self: flex-end;
+  
   p {
     width: 50px;
   }
@@ -117,12 +118,12 @@ export const Columns = styled.div`display: flex;
 `;
 
 export const MovementsContainer = styled.div`
-  height: 500px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
   align-items: center;
+  display: flex;
   flex-direction: column;
+  height: 500px;
+  justify-content: center;
+  width: 100%;
 
   @media screen and (max-width: 880px) {
     height: fit-content;
@@ -131,15 +132,15 @@ export const MovementsContainer = styled.div`
 
 export const BtnPlay = styled.button`
   align-self: flex-end;
-  width: 400px;
-  height: 50px;
-  color: white;
-  font-size: 25px;
   background: seaGreen;
   border: none;
   border-radius: 5px;
-  margin: 2px 0;
+  color: white;
   font-family: 'Merienda', cursive;
+  font-size: 25px;
+  height: 50px;
+  margin: 2px 0;
+  width: 400px;
 
   :disabled {
     background-color: grey;

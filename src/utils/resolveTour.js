@@ -1,4 +1,5 @@
 import loop from './loop';
+
 export default function resolveTour(casa) {
   const startIndex =  loop.indexOf(casa.toLowerCase());
 
@@ -10,4 +11,4 @@ export default function resolveTour(casa) {
     index < startIndex ? end.push(elem) : start.push(elem);
   })
   return [...start, ...end]
-}
+};

@@ -1,5 +1,5 @@
 export const getMatrixPosition = (position) => {
-  const [column, line] = position.toLowerCase().split('')
+  const [column, line] = position.toLowerCase().split('');
 
   const toNumber = {
     a: 1,
@@ -10,10 +10,10 @@ export const getMatrixPosition = (position) => {
     f: 6,
     g: 7,
     h: 8,
-  }
+  };
 
   return `${line -1}-${toNumber[column] -1}`
-}
+};
 
 export const toLetter = (num) =>
-  [ 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'][Number(num)] 
+  [ 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'][Number(num)];

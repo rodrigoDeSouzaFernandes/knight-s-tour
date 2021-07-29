@@ -7,6 +7,6 @@ const loop = [
   'a1', 'c2', 'e1', 'g2', 'h4', 'g6', 'h8', 'f7',
   'h6', 'g4', 'h2', 'f1', 'd2', 'b1', 'a3', 'b5',
   'a7', 'c8', 'e7', 'g8', 'f6', 'h7', 'g5', 'f3'
-]
+];
 
 export default loop;

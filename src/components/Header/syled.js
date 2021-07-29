@@ -1,17 +1,17 @@
 import styled from 'styled-components';
 
 export const HeaderBody = styled.header`
-  display: flex;
   align-items: center;
+  background: linear-gradient(grey, gainsboro);
+  color: rgb(30,  30, 50);
+  display: flex;
   justify-content: space-between;
   padding: 0 30px;
-  background: linear-gradient(grey, gainsboro);
-  color: rgb(30,  30, 50)
 `;
 
 export const HeaderImg = styled.img`
-  width: 100px;
   height: 50px;
+  width: 100px;
 
   :nth-child(even) {
     filter: invert(100%);
@@ -24,8 +24,8 @@ export const HeaderImg = styled.img`
 `;
 
 export const Title = styled.h1`
-  font-family: 'Merienda', cursive;
   color: white;
+  font-family: 'Merienda', cursive;
   font-size: 30px;
   text-shadow: 5px 5px 5px black;
 
