@@ -15,7 +15,7 @@ function InitialMessage() {
         </MessageText>
         <MessageText>
           Selecione uma casa do tabuleiro e então clique em começar,
-          caso não selecione nenhuma a casa inicial será "a1"
+          caso não selecione nenhuma, a casa inicial será "a1"
         </MessageText>
         <MessageButton
           onClick={ () => setActive(false) }
