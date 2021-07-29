@@ -65,11 +65,9 @@ export const Line = styled.div`
 export const Move = styled.span`
   width: 12%;
   min-width: 70px;
+  background: white;
   :nth-child(odd){
     background: rgb(200, 200, 200);
-  }
-  :nth-child(even){
-    background: rgb(220, 220, 220);
   }
 
   @media screen and (max-width: 490px) {
@@ -137,7 +135,7 @@ export const BtnPlay = styled.button`
   height: 50px;
   color: white;
   font-size: 25px;
-  background: green;
+  background: seaGreen;
   border: none;
   border-radius: 5px;
   margin: 2px 0;
