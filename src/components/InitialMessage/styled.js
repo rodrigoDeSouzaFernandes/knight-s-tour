@@ -5,9 +5,8 @@ export const MessageBody = styled.div`
   background: rgba(200, 200, 200, 0.5);
   backdrop-filter: blur(10px);
   display: flex;
-  height: 100vh;
+  min-height: 100vh;
   justify-content: center;
-  padding: 10px;
   position: absolute;
   width: 100%;
   z-index: 1;

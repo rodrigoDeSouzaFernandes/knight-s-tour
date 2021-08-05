@@ -1,10 +1,9 @@
-import React, { useState } from 'react'
+import React, { useState, useCallback } from 'react'
 import { getMatrixPosition, toLetter } from '../../utils/convert';
 import resolveTour from '../../utils/resolveTour';
 
 import { BoardBody, Square, Line, Knight, Move,
   Movements, Body, Columns, MovementsContainer, BtnPlay } from './styled'
-
 
 function Board() {
   const makeBoard = Array(8).fill(Array(8).fill({visited: false, knight: false, content:''}))
@@ -14,28 +13,31 @@ function Board() {
   const [playing, setPlaying] = useState(false);
   const [reset, setReset] = useState(false);
 
-  const setKnight = (square, content = '') => {
-    const [line, column] = square.split('-').map(Number);
-    
-    const newBoard = board.map((row, l) => row
-    .map((col, c) => {
-      
-      if (l == line && column == c) {
-        return {
-          content,
-          visited: true,
-          knight: true,
+  const setKnight = useCallback(
+    (square, content = 'x') => {
+      const [line, column] = square.split('-').map(Number);
+  
+      setInitialPosition({line, column});
+      setBoard(prev => {
+        return prev.map((row, l) => row
+        .map((col, c) => {
+          
+          if (l == line && column == c) {
+            return {
+              content,
+              visited: true,
+              knight: true,
+              };
           };
-      };
-      return {
-        ...col,
-        knight: false,
-      };
-    }));
-
-    setInitialPosition({line, column});
-    setBoard(newBoard);
-  }
+          return {
+            ...col,
+            knight: false,
+          };
+        }));
+      });
+    },
+    [],
+  )
 
   const play = ({line, column}) => {
     const initSquare = `${toLetter(column)}${line + 1}`;
