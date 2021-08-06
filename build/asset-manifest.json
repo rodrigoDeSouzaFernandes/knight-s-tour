@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/KightsTour/static/css/main.1f0798f0.chunk.css",
+    "main.js": "/KightsTour/static/js/main.523c5119.chunk.js",
+    "main.js.map": "/KightsTour/static/js/main.523c5119.chunk.js.map",
+    "runtime-main.js": "/KightsTour/static/js/runtime-main.dd99006b.js",
+    "runtime-main.js.map": "/KightsTour/static/js/runtime-main.dd99006b.js.map",
+    "static/js/2.2e2022ed.chunk.js": "/KightsTour/static/js/2.2e2022ed.chunk.js",
+    "static/js/2.2e2022ed.chunk.js.map": "/KightsTour/static/js/2.2e2022ed.chunk.js.map",
+    "static/js/3.02a335cd.chunk.js": "/KightsTour/static/js/3.02a335cd.chunk.js",
+    "static/js/3.02a335cd.chunk.js.map": "/KightsTour/static/js/3.02a335cd.chunk.js.map",
+    "index.html": "/KightsTour/index.html",
+    "static/css/main.1f0798f0.chunk.css.map": "/KightsTour/static/css/main.1f0798f0.chunk.css.map",
+    "static/js/2.2e2022ed.chunk.js.LICENSE.txt": "/KightsTour/static/js/2.2e2022ed.chunk.js.LICENSE.txt",
+    "static/media/horse.28904a4d.png": "/KightsTour/static/media/horse.28904a4d.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.dd99006b.js",
+    "static/js/2.2e2022ed.chunk.js",
+    "static/css/main.1f0798f0.chunk.css",
+    "static/js/main.523c5119.chunk.js"
+  ]
+}
