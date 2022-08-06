@@ -6,11 +6,10 @@ export const HeaderBody = styled.header`
 `;
 
 export const Container = styled.div`
-  max-width: 1300px;
+  max-width: 1300px;  
   margin: auto;
   display: flex;
   justify-content: space-between;
-  padding: 0 30px;
   align-items: center;
 `;
 export const HeaderImg = styled.img`
@@ -32,6 +31,7 @@ export const Title = styled.h1`
   font-family: "Merienda", cursive;
   font-size: 30px;
   text-shadow: 5px 5px 5px black;
+  padding-left: 30px;
 
   @media screen and (max-width: 600px) {
     width: 100%;
