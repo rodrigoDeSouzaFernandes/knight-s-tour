@@ -86,11 +86,9 @@ function useBoard() {
   return {
     board,
     playing,
-    movements,
     reset,
-    play,
     cleanBoard,
-    setKnight,
+    movements,
     start,
     handleClickSquare,
   };
