@@ -28,8 +28,6 @@ Ao acessar a aplicação você deve selecionar uma casa no tabuleiro e clicar em
   npm start
   ```
 
-
-
 ## Tela de início:
 ![tela de inicio](/public/initial-message.jpeg)
 
