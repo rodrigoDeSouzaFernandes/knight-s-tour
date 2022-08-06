@@ -9,7 +9,7 @@ precisa passar por todas as casas do tabuleiro sem repetir.
 
 Recebi o desafio de desenvolver uma aplicação em React que solucionasse
 o problema do cavalo.  
-Ao acessar a aplicação você deve selecionar uma casa no tabuleiro e clicar em começar, pronto agora a mágica acontece, voce tem a solução para o passeio do cavalo.  
+Ao acessar a aplicação você deve selecionar uma casa no tabuleiro e clicar em começar, pronto agora a mágica acontece, você tem a solução para o passeio do cavalo.  
 
 ## Rodando o projeto na sua máquina
 
