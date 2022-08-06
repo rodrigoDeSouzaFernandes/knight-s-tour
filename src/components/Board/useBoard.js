@@ -1,4 +1,4 @@
-import { useCallback, useState } from "react";
+import { useCallback, useMemo, useState } from "react";
 import { getMatrixPosition, toLetter } from "../../utils/convert";
 import resolveTour from "../../utils/resolveTour";
 
@@ -15,29 +15,32 @@ function useBoard() {
   const [playing, setPlaying] = useState(false);
   const [reset, setReset] = useState(false);
 
-  const setKnight = useCallback((square, content = "") => {
-    const [line, column] = square.split("-").map(Number);
+  const setKnight = useCallback(
+    (square, content = "") => {
+      const [line, column] = square.split("-").map(Number);
 
-    setInitialPosition({ line, column });
+      setInitialPosition({ line, column });
 
-    setBoard((prev) => {
-      return prev.map((row, l) =>
-        row.map((col, c) => {
-          if (l == line && column == c) {
+      setBoard((prev) => {
+        return prev.map((row, l) =>
+          row.map((col, c) => {
+            if (l == line && column == c) {
+              return {
+                content,
+                visited: true,
+                knight: true,
+              };
+            }
             return {
-              content,
-              visited: true,
-              knight: true,
+              ...col,
+              knight: false,
             };
-          }
-          return {
-            ...col,
-            knight: false,
-          };
-        })
-      );
-    });
-  }, []);
+          })
+        );
+      });
+    },
+    [board]
+  );
 
   const play = ({ line, column }) => {
     const initSquare = `${toLetter(column)}${line + 1}`;
@@ -70,22 +73,26 @@ function useBoard() {
     setPlaying(false);
   };
 
-  const start = () => {
+  const start = useCallback(() => {
     setPlaying(true);
     play(initialPosition);
-  };
+  }, [initialPosition]);
+
+  const handleClickSquare = useMemo(
+    () => (!playing ? ({ target: { id } }) => setKnight(id) : null),
+    [playing]
+  );
 
   return {
     board,
     playing,
-    initialPosition,
     movements,
     reset,
     play,
     cleanBoard,
     setKnight,
-    setPlaying,
     start,
+    handleClickSquare,
   };
 }
 

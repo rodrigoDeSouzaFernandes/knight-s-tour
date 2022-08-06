@@ -21,8 +21,8 @@ function Board() {
     reset,
     cleanBoard,
     movements,
-    setKnight,
     start,
+    handleClickSquare,
   } = useBoard();
 
   return (
@@ -43,9 +43,7 @@ function Board() {
                 <Square
                   key={`square ${(l, c)}`}
                   id={`${l}-${c}`}
-                  onClick={
-                    !playing ? ({ target: { id } }) => setKnight(id) : null
-                  }
+                  onClick={handleClickSquare}
                 >
                   {content}
                 </Square>
