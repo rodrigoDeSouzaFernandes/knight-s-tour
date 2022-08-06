@@ -57,6 +57,7 @@ export const Line = styled.div`
 
   p {
     width: 50px;
+    text-align:center;
   }
 
   @media screen and (max-width: 490px) {
@@ -113,6 +114,7 @@ export const Columns = styled.div`
 
   p {
     width: 50px;
+    text-align:center;
   }
 
   @media screen and (max-width: 490px) {
