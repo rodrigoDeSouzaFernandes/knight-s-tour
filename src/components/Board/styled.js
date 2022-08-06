@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import horse from '../../imgs/horse.png'
+import styled from "styled-components";
+import horse from "../../imgs/horse.png";
 
 export const BoardBody = styled.main`
   align-items: center;
@@ -17,18 +17,27 @@ export const Square = styled.div`
   justify-content: center;
   width: 50px;
 
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+
   @media screen and (max-width: 490px) {
     height: 30px;
     width: 30px;
   }
 `;
 
-export const Knight = styled.div`
+export const Knight = styled.button`
   background-image: url(${horse});
   background-position: center;
   background-size: cover;
   height: 50px;
   width: 50px;
+  outline: none;
+  border: none;
+  background: transparent;
 
   @media screen and (max-width: 490px) {
     height: 30px;
@@ -41,7 +50,7 @@ export const Line = styled.div`
   flex-direction: row;
 
   :nth-child(even) div:nth-child(even),
-  :nth-child(ODD) div:nth-child(ODD){
+  :nth-child(ODD) div:nth-child(ODD) {
     background-color: white;
     color: teal;
     filter: invert(100%);
@@ -54,7 +63,7 @@ export const Line = styled.div`
   @media screen and (max-width: 490px) {
     p {
       height: 30px;
-      margin:0;
+      margin: 0;
       width: 30px;
     }
 
@@ -66,7 +75,7 @@ export const Move = styled.span`
   background: white;
   min-width: 70px;
   width: 12%;
-  :nth-child(odd){
+  :nth-child(odd) {
     background: rgb(200, 200, 200);
   }
 
@@ -103,9 +112,10 @@ export const Body = styled.div`
   }
 `;
 
-export const Columns = styled.div`display: flex;
+export const Columns = styled.div`
+  display: flex;
   align-self: flex-end;
-  
+
   p {
     width: 50px;
   }
@@ -136,7 +146,7 @@ export const BtnPlay = styled.button`
   border: none;
   border-radius: 5px;
   color: white;
-  font-family: 'Merienda', cursive;
+  font-family: "Merienda", cursive;
   font-size: 25px;
   height: 50px;
   margin: 2px 0;
@@ -150,4 +160,3 @@ export const BtnPlay = styled.button`
     width: 240px;
   }
 `;
-

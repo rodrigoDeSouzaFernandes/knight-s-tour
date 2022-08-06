@@ -14,10 +14,11 @@ function Board() {
   const [reset, setReset] = useState(false);
 
   const setKnight = useCallback(
-    (square, content = 'x') => {
+    (square, content = '') => {
       const [line, column] = square.split('-').map(Number);
   
       setInitialPosition({line, column});
+
       setBoard(prev => {
         return prev.map((row, l) => row
         .map((col, c) => {
