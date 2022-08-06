@@ -10,10 +10,30 @@ precisa passar por todas as casas do tabuleiro sem repetir.
 Recebi o desafio de desenvolver uma aplicação em React que solucionasse
 o problema do cavalo.  
 Ao acessar a aplicação você deve selecionar uma casa no tabuleiro e clicar em começar, pronto agora a mágica acontece, voce tem a solução para o passeio do cavalo.  
-Foi muito divertido o desenvolvimento, usei styled-components para a estilização e fiquei satisfeito com meu resultado. 
+
+## Rodando o projeto na sua máquina
+
+1. Clone o ropositório (ou se preferir faça download do arquivo .zip)
+  ```
+  git clone git@github.com:rodrigoDeSouzaFernandes/KightsTour.git
+  ```
+
+2. Acesse a pasta do projeto e instale as dependencias 
+  ```
+   npm install
+  ```
+
+2. Rode o projeto localmente 
+  ```
+  npm start
+  ```
+
+
 
 ## Tela de início:
 ![tela de inicio](/public/initial-message.jpeg)
 
-## Tela principla:
+## Tela principal:
 ![tela de inicio](/public/board.jpeg)
+
+

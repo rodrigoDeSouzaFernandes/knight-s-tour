@@ -73,7 +73,7 @@ export const Line = styled.div`
 export const Move = styled.span`
   background: white;
   min-width: 70px;
-  width: 12%;
+  padding: 0 3px;
   :nth-child(odd) {
     background: rgb(200, 200, 200);
   }
@@ -129,6 +129,7 @@ export const MovementsContainer = styled.div`
   height: 500px;
   justify-content: center;
   padding-left: 20px;
+  width: 100%;
 
   @media screen and (max-width: 880px) {
     height: fit-content;
