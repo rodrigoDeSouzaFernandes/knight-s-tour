@@ -70,6 +70,11 @@ function useBoard() {
     setPlaying(false);
   };
 
+  const start = () => {
+    setPlaying(true);
+    play(initialPosition);
+  };
+
   return {
     board,
     playing,
@@ -80,6 +85,7 @@ function useBoard() {
     cleanBoard,
     setKnight,
     setPlaying,
+    start,
   };
 }
 

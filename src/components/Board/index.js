@@ -15,7 +15,15 @@ import {
 } from "./styled";
 
 function Board() {
-  const {board, playing, initialPosition, reset, cleanBoard, movements, setKnight, setPlaying, play} = useBoard();
+  const {
+    board,
+    playing,
+    reset,
+    cleanBoard,
+    movements,
+    setKnight,
+    start,
+  } = useBoard();
 
   return (
     <Body>
@@ -48,13 +56,7 @@ function Board() {
           </Line>
         ))}
         {!playing ? (
-          <BtnPlay
-            disabled={playing}
-            onClick={() => {
-              setPlaying(true);
-              play(initialPosition);
-            }}
-          >
+          <BtnPlay disabled={playing} onClick={start}>
             COMEÇAR
           </BtnPlay>
         ) : (
