@@ -29,7 +29,7 @@ export const Square = styled.div`
   }
 `;
 
-export const Knight = styled.button`
+export const Knight = styled.div`
   background-image: url(${horse});
   background-position: center;
   background-size: cover;
@@ -37,7 +37,6 @@ export const Knight = styled.button`
   width: 50px;
   outline: none;
   border: none;
-  background: transparent;
 
   @media screen and (max-width: 490px) {
     height: 30px;
@@ -90,21 +89,17 @@ export const Movements = styled.p`
   display: flex;
   flex-wrap: wrap;
   height: fit-content;
-  justify-content: flex-start;
+  justify-content: stretch;
   line-height: 2;
   margin: 10px;
-  width: 80%;
-
-  @media screen and (max-width: 490px) {
-    width: 100%;
-  }
+  text-align: center;
 `;
 
 export const Body = styled.div`
   align-items: start;
   display: flex;
   justify-content: center;
-  padding: 20px;
+  padding: 30px;
 
   @media screen and (max-width: 880px) {
     align-items: center;
@@ -133,7 +128,7 @@ export const MovementsContainer = styled.div`
   flex-direction: column;
   height: 500px;
   justify-content: center;
-  width: 100%;
+  padding-left: 20px;
 
   @media screen and (max-width: 880px) {
     height: fit-content;

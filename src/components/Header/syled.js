@@ -1,14 +1,18 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const HeaderBody = styled.header`
-  align-items: center;
   background: linear-gradient(grey, gainsboro);
-  color: rgb(30,  30, 50);
+  color: rgb(30, 30, 50);
+`;
+
+export const Container = styled.div`
+  max-width: 1300px;
+  margin: auto;
   display: flex;
   justify-content: space-between;
   padding: 0 30px;
+  align-items: center;
 `;
-
 export const HeaderImg = styled.img`
   height: 50px;
   width: 100px;
@@ -25,7 +29,7 @@ export const HeaderImg = styled.img`
 
 export const Title = styled.h1`
   color: white;
-  font-family: 'Merienda', cursive;
+  font-family: "Merienda", cursive;
   font-size: 30px;
   text-shadow: 5px 5px 5px black;
 
